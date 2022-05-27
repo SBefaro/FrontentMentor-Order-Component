@@ -1,0 +1,147 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+body{
+    background: var(--Pale-blue) url("../images/pattern-background-mobile.svg") no-repeat;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card{
+    text-align: center;
+    background: white;
+    width: 90%;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card__body{
+    padding: 1.8rem;
+}
+
+h1{
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+
+.body__details p{
+    color:hsl(224, 23%, 55%);
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 1.2rem 0.9rem;
+}
+
+.product{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .85rem;
+    font-weight: 900;
+    background: var(--Very-pale-blue);
+    border-radius: 10px;
+    padding: 1rem .8rem;
+}
+
+.product__description{
+    display: flex;
+    align-items: center;
+}
+.description__icon{
+    max-width: 30%;
+}
+.description__name{
+    margin-left: 20px;
+    line-height: 1.25rem;
+}
+.name__price{
+    font-weight: 500;
+    color:hsl(224, 23%, 55%);
+}
+.product__button-change{
+    font-weight: 700;
+    font-size: .76rem;
+    transition: all .3s ease;
+}
+
+.product__button-change:hover{
+    text-decoration: none;
+    color: var(--Bright-blue);
+    opacity: 0.6;
+}
+
+
+button{
+    display: block;
+    width: 100%;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.button__payment{
+    color: white;
+    margin: 20px 0;
+    background: var(--Bright-blue);
+    border-radius: 10px;
+    padding: .9rem 0;
+    font-size: .87rem;
+    font-weight: 700;
+    box-shadow: 0 1.3rem 0.6rem -0.1rem hsl(225, 100%, 94%);
+    transition: all .3s ease;
+}
+.button__payment:hover{
+    background: hsla(245, 75%, 52%, 0.6);
+}
+
+.button__cancel{
+    color: var(--Desaturated-blue);
+    font-size: .77rem;
+    font-weight: 900;
+    transition: all .3s ease;
+}
+.button__cancel:hover{
+    color: black;
+}
+
+
+@media (min-width: 376px){
+    body{
+        background-image: url('../images/pattern-background-desktop.svg')
+    }
+    .card{
+        max-width: 350px;
+    }
+    .body__details p{
+        font-size: .8rem;
+    }
+    .button__payment{
+        font-size: .76rem;
+        padding: .7rem 0;
+    }
+    .button__cancel{
+        font-size: .75rem;
+        font-weight: 700;
+    }
+}
