@@ -82,13 +82,17 @@ h1{
 .product__button-change{
     font-weight: 700;
     font-size: .76rem;
+    color: var(--Bright-blue);
     transition: all .3s ease;
 }
 
 .product__button-change:hover{
     text-decoration: none;
-    color: var(--Bright-blue);
     opacity: 0.6;
+}
+
+.product__button-change:visited{
+    color: var(--Bright-blue);
 }
 
 
